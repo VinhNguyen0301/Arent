@@ -1,18 +1,12 @@
 import {
   AppBar,
-  Badge,
   Box,
   InputBase,
-  Menu,
   styled,
   Typography,
   MenuItem,
 } from "@mui/material";
 import Toolbar from "@mui/material/Toolbar";
-import CodeIcon from "@mui/icons-material/Code";
-import MailOutlineIcon from "@mui/icons-material/MailOutline";
-import Avatar from "@mui/material/Avatar";
-// import superman from "../superman.png";
 import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 import React, { useState } from "react";
 import { ChallengeIcon, InfoIcon, LogoIcon, ProfileIcon } from "./icon";
@@ -32,14 +26,13 @@ const NavBar = () => {
   return (
     <AppBar position="sticky">
       <StyledToolBar>
-        <Box marginLeft="160px">
+        <Box>
           <LogoIcon />
         </Box>
         <Box
           sx={{
             display: "flex",
             flexDirection: "row",
-            marginLeft: "288px",
           }}
         >
           <Box
@@ -49,7 +42,9 @@ const NavBar = () => {
             }}
           >
             <ProfileIcon />
-            <Typography>{t("myProfile")}</Typography>
+            <Typography variant="subtitle1" ml={1}>
+              {t("myProfile")}
+            </Typography>
           </Box>
           <Box
             sx={{
@@ -59,7 +54,9 @@ const NavBar = () => {
             }}
           >
             <ChallengeIcon />
-            <Typography>{t("challenge")}</Typography>
+            <Typography variant="subtitle1" ml={1}>
+              {t("challenge")}
+            </Typography>
           </Box>
           <Box
             sx={{
@@ -69,7 +66,9 @@ const NavBar = () => {
             }}
           >
             <InfoIcon />
-            <Typography>{t("info")}</Typography>
+            <Typography variant="subtitle1" ml={1}>
+              {t("info")}
+            </Typography>
           </Box>
         </Box>
         <Box marginLeft="16px">

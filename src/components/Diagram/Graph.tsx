@@ -26,28 +26,46 @@ export const options = {
   responsive: true,
   plugins: {
     legend: {
-      position: "top" as const,
+      display: false,
     },
     title: {
-      display: true,
+      display: false,
       text: "Chart.js Line Chart",
+    },
+  },
+  scales: {
+    y: {
+      ticks: {
+        display: false,
+        beginAtZero: true,
+      },
+      // to remove the y-axis grid
+      grid: {
+        drawBorder: false,
+        display: false,
+      },
+    },
+    x: {
+      grid: {
+        color: "#777777",
+      },
     },
   },
 };
 
 const labels = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "Aug",
-  "Sep",
-  "Oct",
-  "Nov",
-  " Dec",
+  "6月",
+  "7月",
+  "8月",
+  "9月",
+  "10月",
+  "11月",
+  "12月",
+  "1月",
+  "2月",
+  "3月",
+  "4月",
+  "5月",
 ];
 
 export const data = {
@@ -71,7 +89,11 @@ export const data = {
 const Graph = () => {
   return (
     <Box height="800px" width="800px">
-      <Line options={options} data={data} />
+      <Line
+        options={options}
+        data={data}
+        style={{ backgroundColor: "#2E2E2E" }}
+      />
     </Box>
   );
 };

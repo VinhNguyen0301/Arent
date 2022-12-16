@@ -4,6 +4,7 @@ import Dashboard from "./views/Dashboard";
 import MenuItem from "./components/Menu/MenuItem/MenuItem";
 import Footer from "./components/footer/Footer";
 import HexagonItem from "./components/Menu/MenuHexagon/HexagonItem";
+import Graph from "./components/Diagram/Graph";
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
       <NavBar />
       <Dashboard />
       {/* <Add /> */}
-      <HexagonItem />
+      <Graph />
+      {/* <HexagonItem /> */}
       {/* <MenuItem />
       <Footer /> */}
     </Box>

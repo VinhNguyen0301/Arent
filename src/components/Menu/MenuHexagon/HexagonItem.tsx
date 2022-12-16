@@ -1,6 +1,7 @@
 import { Box, Typography, styled } from "@mui/material";
 import React from "react";
 import HexagonIcon from "@mui/icons-material/Hexagon";
+import { CupIcon, KnifeIcon } from "../../icon";
 
 const HexagonStyled = styled(Box)(() => ({
   marginTop: "30px",
@@ -9,7 +10,7 @@ const HexagonStyled = styled(Box)(() => ({
   backgroundColor: "#27aae1",
   borderColor: "#27aae1",
   position: "relative",
-  //   display: "inline-block",
+  display: "inline-block",
 
   "&:before": {
     content: '""',
@@ -36,9 +37,13 @@ const HexagonStyled = styled(Box)(() => ({
 
 const HexagonItem = () => {
   return (
-    <Box ml="50%">
+    <Box ml="50%" mt="90px">
       <HexagonStyled>
-        <Typography>Test</Typography>
+        <Box ml="25px">
+          <KnifeIcon />
+          {/* <CupIcon /> */}
+          <Typography>Morning</Typography>
+        </Box>
       </HexagonStyled>
     </Box>
   );

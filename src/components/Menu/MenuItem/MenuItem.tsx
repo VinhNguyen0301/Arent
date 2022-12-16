@@ -1,7 +1,7 @@
 import * as React from "react";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
-import { Box, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 
 export default function MenuItem() {
   return (
@@ -36,6 +36,18 @@ export default function MenuItem() {
           </ImageListItem>
         ))}
       </ImageList>
+      <Button
+        style={{
+          background:
+            "linear-gradient(32.95deg, #FFCC21 8.75%, #FF963C 86.64%)",
+          width: "296px",
+          height: "56px",
+          marginTop: "28px",
+          marginLeft: "27%",
+        }}
+      >
+        記録をもっと見る
+      </Button>
     </Box>
   );
 }

@@ -1,5 +1,5 @@
-import { createTheme, ThemeOptions } from "@mui/material/styles";
-import colors from "assets/scss/_themes-vars.module.scss";
+import { createTheme, ThemeOptions } from "@mui/material";
+import colors from "../assets/scss/_themes-vars.module.scss";
 import componentStyleOverrides from "../themes/compStyleOverride";
 import themePalette from "../themes/palette";
 import { themeTypography } from "../themes/typography";
@@ -50,7 +50,7 @@ export const theme = () => {
       },
     },
   };
-
+  console.log("breakpoint", themeOptions);
   const themes = createTheme(themeOptions);
   themes.components = componentStyleOverrides(themeOption);
 

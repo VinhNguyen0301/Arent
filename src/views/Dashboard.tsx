@@ -1,21 +1,44 @@
 import React from "react";
 import { Box, Stack } from "@mui/material";
 import food from "../assets/Photo/photo/d01.jpg";
+import Graph from "../components/Diagram/Graph";
+import { none } from "ramda";
 
 const Dashboard = () => {
   return (
-    <Stack direction="row" justifyContent="space-between">
-      <Box maxWidth="540px" sx={{ backgroundColor: "gray" }}>
-        {/* <img
-          src="https://cdn.pixabay.com/photo/2013/07/18/10/56/railroad-163518_1280.jpg"
-          width="540px"
-          height="316px"
-        ></img> */}
-        <img src={food} width="540px" height="316px"></img>
+    <Stack direction="row" spacing={2}>
+      <Box maxWidth="540px" maxHeight="312px">
+        <img
+          src={food}
+          style={{
+            maxHeight: "100%",
+            objectFit: "none",
+            width: "540px",
+            position: "relative",
+          }}
+        ></img>
+        <div
+          style={{
+            transform: "rotate(268deg)",
+            position: "absolute",
+            top: "0",
+            marginLeft: "58px",
+          }}
+        >
+          <svg
+            viewBox="0 0 100 100"
+            style={{
+              strokeDasharray: "110",
+              strokeDashoffset: "0",
+              width: "400px",
+            }}
+          >
+            <circle cx="50" cy="50" r="23" stroke="white" fill="none" />
+          </svg>
+        </div>
+        {/* <span>05/21 75%</span> */}
       </Box>
-      <Box sx={{ backgroundColor: "gray" }} width="100%">
-        Line chart component
-      </Box>
+      <Graph />
     </Stack>
   );
 };

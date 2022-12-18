@@ -1,0 +1,182 @@
+// paper & background
+$paper: #ffffff;
+$background: #1a1a34;
+$backgroundLight: #fafafb;
+
+// divider
+$divider: #1a1a340a;
+
+// primary
+$primaryLight: #c1adff;
+$primaryMain: #6333ff;
+$primaryDark: #3f21a3;
+
+// supporting primary
+$supportingPrimaryExtraLight: #fcfbff;
+$supportingPrimaryLight: #f9f7ff;
+$supportingPrimaryMain: #f3efff;
+$supportingPrimaryDark: #e6deff;
+
+// secondary
+$secondaryLight: #ffa366;
+$secondaryMain: #ff6600;
+$secondaryDark: #b94a00;
+
+// success Colors
+$successExtraLight: #f3fff6;
+$successLight: #85dcbd;
+$successMain: #33c491;
+$successDark: #0b9062;
+
+// error
+$errorExtraLight: #fef3f3;
+$errorLight: #f98888;
+$errorMain: #f53838;
+$errorDark: #9d2424;
+
+// warning
+$warningExtraLight: #fffbf1;
+$warningLight: #fed66e;
+$warningMain: #fecc4a;
+$warningDark: #c08b00;
+
+// info
+$infoExtraLight: #effbfc;
+$infoLight: #8ae0eb;
+$infoMain: #3ccbde;
+$infoDark: #26828e;
+
+// grey
+$grey50: #fafafa;
+$grey100: #f5f5f5;
+$grey200: #eeeeee;
+$grey300: #e0e0e0;
+$grey500: #9e9e9e;
+$grey600: #757575;
+$grey700: #616161;
+$grey900: #212121;
+$grey1000: #3b3b3b;
+
+// light grey
+$lightGreyLight: #ebebeb;
+$lightGreyMain: #dedede;
+$lightGreyDark: #8e8e8e;
+
+// dark grey
+$darkGreyLight: #949495;
+$darkGreyMain: #4d4d4f;
+$darkGreyDark: #1f1f20;
+
+// text variants
+$textPrimary: #1a1a34;
+$textSecondary: #767685;
+$textTertiary: #a3a3ae;
+$invertedTextLight: #ffffff0a;
+$invertedTextMain: #ffffff14;
+$invertedTextDark: #ffffff29;
+
+// Garident
+$rgbaRightContainer: rgba(255, 255, 255, 0.8);
+$rgbaleftContainer: rgba(0, 0, 0, 0.36);
+$rbgaSecondaryLight: rgba(255, 102, 0, 0.04);
+// border
+$border: #ededef;
+//Shadow
+$shadowPopup: 2px 4px 12px rgba(0, 0, 0, 0.12);
+
+// stroke
+$strokeLight: #FAFAFB;
+$strokeMain: #F6F6F7;
+$strokeDark: #EDEDEF;
+// ==============================|| JAVASCRIPT ||============================== //
+
+:export {
+  // paper & background
+  paper: $paper;
+  background: $background;
+  backgroundLight: $backgroundLight;
+  divider: $divider;
+
+  // primary
+  primaryLight: $primaryLight;
+  primaryMain: $primaryMain;
+  primaryDark: $primaryDark;
+
+  // supporting primary
+  supportingPrimaryExtraLight: $supportingPrimaryExtraLight;
+  supportingPrimaryLight: $supportingPrimaryLight;
+  supportingPrimaryMain: $supportingPrimaryMain;
+  supportingPrimaryDark: $supportingPrimaryDark;
+
+  // secondary
+  secondaryLight: $secondaryLight;
+  secondaryMain: $secondaryMain;
+  secondaryDark: $secondaryDark;
+
+  // success
+  successExtraLight: $successExtraLight;
+  successLight: $successLight;
+  successMain: $successMain;
+  successDark: $successDark;
+
+  // error
+  errorExtraLight: $errorExtraLight;
+  errorLight: $errorLight;
+  errorMain: $errorMain;
+  errorDark: $errorDark;
+
+  // warning
+  warningExtraLight: $warningExtraLight;
+  warningLight: $warningLight;
+  warningMain: $warningMain;
+  warningDark: $warningDark;
+
+  // info
+  infoExtraLight: $infoExtraLight;
+  infoLight: $infoLight;
+  infoMain: $infoMain;
+  infoDark: $infoDark;
+
+  // grey
+  grey50: $grey50;
+  grey100: $grey100;
+  grey200: $grey200;
+  grey300: $grey300;
+  grey500: $grey500;
+  grey600: $grey600;
+  grey700: $grey700;
+  grey900: $grey900;
+  grey1000: $grey1000;
+
+  // light grey
+  lightGreyLight: $lightGreyLight;
+  lightGreyMain: $lightGreyMain;
+  lightGreyDark: $lightGreyDark;
+
+  // dark grey
+  darkGreyLight: $darkGreyLight;
+  darkGreyMain: $darkGreyMain;
+  darkGreyDark: $darkGreyDark;
+
+  // text variants
+  textPrimary: $textPrimary;
+  textSecondary: $textSecondary;
+  textTertiary: $textTertiary;
+  invertedTextLight: $invertedTextLight;
+  invertedTextMain: $invertedTextMain;
+  invertedTextDark: $invertedTextDark;
+
+  // Gardient
+  rgbaRightContainer: $rgbaRightContainer;
+  rgbaLeftContainer: $rgbaleftContainer;
+
+  // Shadow
+  shadowPopup: $shadowPopup;
+  border: $border;
+  rbgaSecondaryLight: $rbgaSecondaryLight;
+
+  // stroke
+  strokeLight: $strokeLight;
+  strokeMain: $strokeMain;
+  strokeDark: $strokeDark;
+}

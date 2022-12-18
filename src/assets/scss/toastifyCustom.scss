@@ -1,0 +1,72 @@
+/* Customize toastify */
+.Toastify__toast {
+  min-height: 48px;
+  border-radius: 8px;
+  box-shadow: unset;
+}
+.Toastify__toast-container {
+  min-width: 500px;
+}
+.Toastify__toast-body {
+  font-family: 'Gotham', sans-serif;
+  font-size: 14px;
+  padding-left: 16px !important;
+  line-height: 17px;
+  width: 100%;
+  font-weight: 500;
+}
+.Toastify__toast > button > svg {
+  display: none;
+}
+
+// icon
+.Toastify__toast--success::before {
+  content: url('../toastify/success.svg');
+  position: relative;
+  z-index: 100000;
+  left: 12px;
+  top: 3px;
+}
+.Toastify__toast--error::before {
+  content: url('../toastify/error.svg');
+  position: relative;
+  z-index: 100000;
+  left: 12px;
+  top: 3px;
+}
+.Toastify__toast--info::before {
+  content: url('../toastify/info.svg');
+  position: relative;
+  z-index: 100000;
+  left: 12px;
+  top: 3px;
+}
+.Toastify__toast--warning::before {
+  content: url('../toastify/warning.svg');
+  position: relative;
+  z-index: 100000;
+  left: 12px;
+  top: 3px;
+}
+
+// UI
+.Toastify__toast--success {
+  border: 1px solid #66ff9114;
+  background: #f3fff6 !important; // extraLight
+  color: #007a22 !important; // dark
+}
+.Toastify__toast--error {
+  border: 1px solid #f5383814;
+  background: #fef3f3 !important; // extraLight
+  color: #9d2424 !important; // dark
+}
+.Toastify__toast--warning {
+  border: 1px solid #fecc4a14;
+  background: #fffbf1 !important; // extraLight
+  color: #c08b00 !important; // dark
+}
+.Toastify__toast--info {
+  border: 1px solid #3ccbde14;
+  background: #effbfc !important; // extraLight
+  color: #26828e !important; // dark
+}

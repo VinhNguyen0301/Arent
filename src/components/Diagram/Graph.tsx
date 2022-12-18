@@ -88,11 +88,15 @@ export const data = {
 
 const Graph = () => {
   return (
-    <Box height="800px" width="800px">
+    <Box
+      height="312px"
+      width="100%"
+      sx={{ backgroundColor: "#2E2E2E", marginLeft: "-16px !important" }}
+    >
       <Line
         options={options}
         data={data}
-        style={{ backgroundColor: "#2E2E2E" }}
+        style={{ backgroundColor: "#2E2E2E", marginLeft: "61px" }}
       />
     </Box>
   );

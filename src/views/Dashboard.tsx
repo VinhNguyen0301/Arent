@@ -1,45 +1,27 @@
 import React from "react";
-import { Box, Stack } from "@mui/material";
-import food from "../assets/Photo/photo/d01.jpg";
 import Graph from "../components/Diagram/Graph";
-import { none } from "ramda";
+import { Grid, Box, Stack } from "@mui/material";
+import HexagonItem from "../components/Menu/MenuHexagon/HexagonItem";
+import D1 from "./D1";
 
 const Dashboard = () => {
   return (
-    <Stack direction="row" spacing={2}>
-      <Box maxWidth="540px" maxHeight="312px">
-        <img
-          src={food}
-          style={{
-            maxHeight: "100%",
-            objectFit: "none",
-            width: "540px",
-            position: "relative",
-          }}
-        ></img>
-        <div
-          style={{
-            transform: "rotate(268deg)",
-            position: "absolute",
-            top: "0",
-            marginLeft: "58px",
-          }}
-        >
-          <svg
-            viewBox="0 0 100 100"
-            style={{
-              strokeDasharray: "110",
-              strokeDashoffset: "0",
-              width: "400px",
-            }}
-          >
-            <circle cx="50" cy="50" r="23" stroke="white" fill="none" />
-          </svg>
-        </div>
-        {/* <span>05/21 75%</span> */}
-      </Box>
-      <Graph />
-    </Stack>
+    <Grid container spacing={2} maxWidth="1280px">
+      <Grid maxHeight="312px" xs={5} sx={{ backgroundColor: "#2E2E2E" }}>
+        <D1 />
+      </Grid>
+      <Grid xs={7}>
+        <Graph />
+      </Grid>
+      <Grid xs={12}>
+        <Box sx={{ display: "flex", justifyContent: "space-evenly" }}>
+          <HexagonItem />
+          <HexagonItem />
+          <HexagonItem />
+          <HexagonItem />
+        </Box>
+      </Grid>
+    </Grid>
   );
 };
 

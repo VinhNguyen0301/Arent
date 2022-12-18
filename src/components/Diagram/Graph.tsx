@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Grid } from "@mui/material";
 import React from "react";
 import { Line } from "react-chartjs-2";
 import {
@@ -88,17 +88,22 @@ export const data = {
 
 const Graph = () => {
   return (
-    <Box
+    <Grid
       height="312px"
       width="100%"
-      sx={{ backgroundColor: "#2E2E2E", marginLeft: "-16px !important" }}
+      sx={{ backgroundColor: "#2E2E2E" }}
+      container
     >
       <Line
         options={options}
         data={data}
-        style={{ backgroundColor: "#2E2E2E", marginLeft: "61px" }}
+        style={{
+          backgroundColor: "#2E2E2E",
+          marginLeft: "61px",
+          // width: "589px",
+        }}
       />
-    </Box>
+    </Grid>
   );
 };
 

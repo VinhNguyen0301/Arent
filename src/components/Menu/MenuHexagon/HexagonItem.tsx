@@ -7,7 +7,7 @@ const HexagonStyled = styled(Box)(() => ({
   marginTop: "30px",
   width: "104px",
   height: "60px",
-  backgroundColor: "#27aae1",
+  backgroundColor: "#FFCC21",
   borderColor: "#27aae1",
   position: "relative",
   display: "inline-block",
@@ -17,7 +17,7 @@ const HexagonStyled = styled(Box)(() => ({
     width: "0",
     height: "0",
     borderBottom: "30px solid",
-    borderColor: "inherit",
+    borderColor: "#FFCC21",
     borderLeft: "52px solid transparent",
     borderRight: "52px solid transparent",
     position: "absolute",
@@ -29,7 +29,7 @@ const HexagonStyled = styled(Box)(() => ({
     position: "absolute",
     bottom: "-30px",
     borderTop: "30px solid",
-    borderColor: "inherit",
+    borderColor: "#FFCC21",
     borderLeft: "52px solid transparent",
     borderRight: "52px solid transparent",
   },
@@ -37,14 +37,18 @@ const HexagonStyled = styled(Box)(() => ({
 
 const HexagonItem = () => {
   return (
-    <Box ml="50%" mt="90px">
+    <Box mt="90px">
       <HexagonStyled>
         <Box ml="25px">
           <KnifeIcon />
           {/* <CupIcon /> */}
-          <Typography>Morning</Typography>
         </Box>
       </HexagonStyled>
+      <Typography
+        sx={{ position: "absolute", marginLeft: "25px", marginTop: "-10px" }}
+      >
+        Morning
+      </Typography>
     </Box>
   );
 };

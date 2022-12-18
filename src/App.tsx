@@ -5,7 +5,6 @@ import Footer from "./components/footer/Footer";
 import { ThemeProvider } from "@mui/material";
 import themes from "./themes/index";
 import Diary from "./components/Diary/Diary";
-import Recommend from "./components/Recommend/Recommend";
 import Infomation from "./views/Infomation";
 
 function App() {
@@ -20,8 +19,8 @@ function App() {
       >
         <Grid></Grid>
         <Grid>
-          <Dashboard />
-          {/* <Infomation /> */}
+          {/* <Dashboard /> */}
+          <Infomation />
         </Grid>
         <Grid></Grid>
       </Stack>
@@ -35,8 +34,6 @@ function App() {
       >
         <Footer />
       </div>
-      {/* <Recommend /> */}
-      {/* <Add /> */}
     </ThemeProvider>
   );
 }

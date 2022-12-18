@@ -22,7 +22,7 @@ const Dashboard = () => {
           <HexagonItem />
         </Box>
       </Grid>
-      <Grid xs={12} mt="30px">
+      <Grid xs={12} mt="30px" marginBottom="114px">
         <MenuItem />
       </Grid>
     </Grid>

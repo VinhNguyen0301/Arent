@@ -24,12 +24,7 @@ const Footer = () => {
   });
 
   return (
-    <AppBar
-      position="sticky"
-      style={{
-        marginTop: "64px",
-      }}
-    >
+    <AppBar position="sticky">
       <StyledToolBar>
         <Box
           sx={{

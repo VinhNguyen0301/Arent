@@ -37,7 +37,7 @@ const HexagonStyled = styled(Box)(() => ({
 
 const HexagonItem = () => {
   return (
-    <Box mt="90px">
+    <Box mt="22px">
       <HexagonStyled>
         <Box ml="25px">
           <KnifeIcon />
@@ -45,7 +45,12 @@ const HexagonItem = () => {
         </Box>
       </HexagonStyled>
       <Typography
-        sx={{ position: "absolute", marginLeft: "25px", marginTop: "-10px" }}
+        sx={{
+          position: "absolute",
+          marginLeft: "25px",
+          marginTop: "-10px",
+          color: "white",
+        }}
       >
         Morning
       </Typography>

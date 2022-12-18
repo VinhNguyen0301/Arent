@@ -3,6 +3,7 @@ import Graph from "../components/Diagram/Graph";
 import { Grid, Box, Stack } from "@mui/material";
 import HexagonItem from "../components/Menu/MenuHexagon/HexagonItem";
 import D1 from "./D1";
+import MenuItem from "../components/Menu/MenuItem/MenuItem";
 
 const Dashboard = () => {
   return (
@@ -20,6 +21,9 @@ const Dashboard = () => {
           <HexagonItem />
           <HexagonItem />
         </Box>
+      </Grid>
+      <Grid xs={12} mt="30px">
+        <MenuItem />
       </Grid>
     </Grid>
   );

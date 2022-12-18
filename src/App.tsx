@@ -1,7 +1,6 @@
 import { Grid, Box, Stack } from "@mui/material";
 import NavBar from "./components/NavBar";
 import Dashboard from "./views/Dashboard";
-import MenuItem from "./components/Menu/MenuItem/MenuItem";
 import Footer from "./components/footer/Footer";
 import { ThemeProvider } from "@mui/material";
 import themes from "./themes/index";
@@ -20,10 +19,9 @@ function App() {
         <Grid></Grid>
       </Stack>
 
+      <Footer />
       {/* <Recommend /> */}
       {/* <Add /> */}
-      {/* <MenuItem />
-      <Footer /> */}
     </ThemeProvider>
   );
 }

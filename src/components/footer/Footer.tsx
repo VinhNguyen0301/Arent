@@ -24,7 +24,12 @@ const Footer = () => {
   });
 
   return (
-    <AppBar position="sticky">
+    <AppBar
+      position="sticky"
+      style={{
+        marginTop: "64px",
+      }}
+    >
       <StyledToolBar>
         <Box
           sx={{
@@ -38,7 +43,6 @@ const Footer = () => {
               flexDirection: "row",
             }}
           >
-            <ProfileIcon />
             <Typography variant="subtitle1" ml={1}>
               {t("myProfile")}
             </Typography>
@@ -50,7 +54,6 @@ const Footer = () => {
               marginLeft: "16px",
             }}
           >
-            <ChallengeIcon />
             <Typography variant="subtitle1" ml={1}>
               {t("challenge")}
             </Typography>
@@ -62,11 +65,19 @@ const Footer = () => {
               marginLeft: "16px",
             }}
           >
-            <InfoIcon />
             <Typography variant="subtitle1" ml={1}>
               {t("info")}
             </Typography>
           </Box>
+          <Typography variant="subtitle1" ml={5}>
+            {t("myProfile")}
+          </Typography>
+          <Typography variant="subtitle1" ml={5}>
+            {t("myProfile")}
+          </Typography>
+          <Typography variant="subtitle1" ml={5}>
+            {t("myProfile")}
+          </Typography>
         </Box>
       </StyledToolBar>
     </AppBar>

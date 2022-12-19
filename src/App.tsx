@@ -4,14 +4,15 @@ import Dashboard from "./views/Dashboard";
 import Footer from "./components/footer/Footer";
 import { ThemeProvider } from "@mui/material";
 import themes from "./themes/index";
-import Diary from "./components/Diary/Diary";
 import Infomation from "./views/Infomation";
 import RecommendPage from "./views/RecommendPage";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
 function App() {
   return (
     <ThemeProvider theme={themes()}>
       <NavBar />
+
       <Stack
         direction="row"
         spacing={2}
@@ -20,9 +21,12 @@ function App() {
       >
         <Grid></Grid>
         <Grid>
-          {/* <Dashboard /> */}
-          {/* <Infomation /> */}
-          <RecommendPage />
+          <Routes>
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/infomation" element={<Infomation />} />
+            <Route path="/recommend" element={<RecommendPage />} />
+            {/* <Route path="/detail/:login" element={<CardInfor />} /> */}
+          </Routes>
         </Grid>
         <Grid></Grid>
       </Stack>

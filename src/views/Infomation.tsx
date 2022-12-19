@@ -33,65 +33,133 @@ const Infomation = () => {
           height="264px"
           sx={{ backgroundColor: "#414141", marginLeft: "207px" }}
         >
-          <Typography color="white">
-            MY EXERCISE
-            <span style={{ marginLeft: "10px" }}>2021.05.21</span>
-          </Typography>
-          <Grid xs={12}>
-            <Stack
-              direction={{ xs: "column", sm: "row" }}
-              spacing={{ xs: 1, sm: 2, md: 4 }}
-            >
-              <Grid xs={6}>
-                <table>
-                  <tr>
-                    <td>
-                      家事全般（立位・軽い）<span>26kcal</span>
-                    </td>
-                    <td>10 min</td>
-                  </tr>
-                  <tr>
-                    <td>家事全般（立位・軽い）</td>
-                    <td>10 min</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      家事全般（立位・軽い）<span>26kcal</span>
-                    </td>
-                    <td>10 min</td>
-                  </tr>
-                  <tr>
-                    <td>家事全般（立位・軽い）</td>
-                    <td>10 min</td>
-                  </tr>
-                </table>
-              </Grid>
-              <Grid xs={6}>
-                <table>
-                  <tr>
-                    <td>
-                      家事全般（立位・軽い）<span>26kcal</span>
-                    </td>
-                    <td>10 min</td>
-                  </tr>
-                  <Divider variant="fullWidth" />
-                  <tr>
-                    <td>家事全般（立位・軽い）</td>
-                    <td>10 min</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      家事全般（立位・軽い）<span>26kcal</span>
-                    </td>
-                    <td>10 min</td>
-                  </tr>
-                  <tr>
-                    <td>家事全般（立位・軽い）</td>
-                    <td>10 min</td>
-                  </tr>
-                </table>
-              </Grid>
-            </Stack>
+          <Grid ml="24px">
+            <Typography color="white" pt="16px">
+              MY EXERCISE
+              <span style={{ marginLeft: "10px" }}>2021.05.21</span>
+            </Typography>
+
+            <Grid xs={12}>
+              <Stack
+                direction={{ xs: "column", sm: "row" }}
+                spacing={{ xs: 1, sm: 2, md: 4 }}
+              >
+                <Grid xs={6}>
+                  <table>
+                    <tr>
+                      <div>
+                        <td style={{ color: "white" }}>
+                          家事全般（立位・軽い）
+                        </td>
+                        <div style={{ color: "#FFCC21" }}>26kcal</div>
+                      </div>
+                      <td style={{ color: "#FFCC21", paddingLeft: "122px" }}>
+                        10 min
+                      </td>
+                    </tr>
+                    <Divider variant="fullWidth" />
+
+                    <tr>
+                      <div style={{ color: "white" }}>
+                        <td>家事全般（立位・軽い）</td>
+                        <div style={{ color: "#FFCC21" }}>26kcal</div>
+                      </div>
+                      <td
+                        style={{
+                          color: "#FFCC21",
+                          paddingLeft: "122px",
+                          marginTop: "4px",
+                        }}
+                      >
+                        10 min
+                      </td>
+                    </tr>
+                    <Divider variant="fullWidth" />
+
+                    <tr>
+                      <div>
+                        <td style={{ color: "white" }}>
+                          家事全般（立位・軽い）
+                        </td>
+                        <div style={{ color: "#FFCC21" }}>26kcal</div>
+                      </div>
+                      <td style={{ color: "#FFCC21", paddingLeft: "122px" }}>
+                        10 min
+                      </td>
+                    </tr>
+                    <Divider variant="fullWidth" />
+
+                    <tr>
+                      <div>
+                        <td style={{ color: "white" }}>
+                          家事全般（立位・軽い）
+                        </td>
+                        <div style={{ color: "#FFCC21" }}>26kcal</div>
+                      </div>
+                      <td style={{ color: "#FFCC21", paddingLeft: "122px" }}>
+                        10 min
+                      </td>
+                    </tr>
+                    <Divider variant="fullWidth" />
+                  </table>
+                </Grid>
+                <Grid xs={6}>
+                  <table>
+                    <tr>
+                      <div>
+                        <td style={{ color: "white" }}>
+                          家事全般（立位・軽い）
+                        </td>
+                        <div style={{ color: "#FFCC21" }}>26kcal</div>
+                      </div>
+                      <td style={{ color: "#FFCC21", paddingLeft: "122px" }}>
+                        10 min
+                      </td>
+                    </tr>
+                    <Divider variant="fullWidth" />
+
+                    <tr>
+                      <div>
+                        <td style={{ color: "white" }}>
+                          家事全般（立位・軽い）
+                        </td>
+                        <div style={{ color: "#FFCC21" }}>26kcal</div>
+                      </div>
+                      <td style={{ color: "#FFCC21", paddingLeft: "122px" }}>
+                        10 min
+                      </td>
+                    </tr>
+                    <Divider variant="fullWidth" />
+
+                    <tr>
+                      <div>
+                        <td style={{ color: "white" }}>
+                          家事全般（立位・軽い）
+                        </td>
+                        <div style={{ color: "#FFCC21" }}>26kcal</div>
+                      </div>
+                      <td style={{ color: "#FFCC21", paddingLeft: "122px" }}>
+                        10 min
+                      </td>
+                    </tr>
+                    <Divider variant="fullWidth" />
+
+                    <tr>
+                      <div>
+                        <td style={{ color: "white" }}>
+                          家事全般（立位・軽い）
+                        </td>
+                        <div style={{ color: "#FFCC21" }}>26kcal</div>
+                      </div>
+                      <td style={{ color: "#FFCC21", paddingLeft: "122px" }}>
+                        10 min
+                      </td>
+                    </tr>
+                    <Divider variant="fullWidth" />
+                  </table>
+                </Grid>
+              </Stack>
+            </Grid>
           </Grid>
         </Box>
       </Grid>

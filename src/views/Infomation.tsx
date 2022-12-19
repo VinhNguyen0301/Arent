@@ -97,7 +97,7 @@ const Infomation = () => {
       </Grid>
       <Grid xs={12} marginTop="56px" width="960px" sx={{ marginLeft: "207px" }}>
         <Box>
-          <div>My Diary</div>
+          <Typography variant="h1">MY DIARY</Typography>
           <Diary />
           <Diary />
         </Box>

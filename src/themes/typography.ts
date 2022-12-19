@@ -57,9 +57,9 @@ const customTyporaphy = {
     lineHeight: "2em",
   },
   bodyMedium: {
-    fontWeight: 400,
-    fontSize: "0.875rem",
-    lineHeight: "1.125rem",
+    fontWeight: 300,
+    fontSize: "12px",
+    lineHeight: "17px",
   },
   bodySmall: {
     fontWeight: 300,
@@ -98,9 +98,9 @@ export const themeTypography = (theme: ThemeOption): TypographyOptions => {
         fontWeight: 700,
       },
       h1: {
-        fontSize: "2.125rem",
-        color: theme.heading,
-        fontWeight: 700,
+        fontWeight: 400,
+        fontSize: "22px",
+        lineHeight: "27px",
       },
       subtitle1: {
         fontWeight: 300,
@@ -108,13 +108,14 @@ export const themeTypography = (theme: ThemeOption): TypographyOptions => {
         lineHeight: "23px",
       },
       subtitle2: {
-        fontSize: "0.75rem",
-        fontWeight: 500,
-        color: theme.colors?.textTertiary,
+        fontWeight: 300,
+        fontSize: "12px",
+        lineHeight: "17px",
       },
       caption: {
-        fontSize: "0.75rem",
         fontWeight: 400,
+        fontSize: "18px",
+        lineHeight: "22px",
       },
       body1: {
         fontSize: "0.875rem",
@@ -171,6 +172,11 @@ export const themeTypography = (theme: ThemeOption): TypographyOptions => {
         fontWeight: 300,
         fontSize: "12px",
         lineHeight: "20px",
+      },
+      mediumCard: {
+        fontWeight: 300,
+        fontSize: "12px",
+        lineHeight: "17px",
       },
       ...customTyporaphy,
     },

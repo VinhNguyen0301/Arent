@@ -12,6 +12,7 @@ import React, { useState } from "react";
 import { ChallengeIcon, InfoIcon, LogoIcon, ProfileIcon } from "./icon";
 import { useTranslation } from "react-i18next";
 import MenuIcon from "@mui/icons-material/Menu";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   const [open, setOpen] = useState(false);
@@ -42,9 +43,11 @@ const NavBar = () => {
             }}
           >
             <ProfileIcon />
-            <Typography variant="subtitle1" ml={1}>
-              {t("myProfile")}
-            </Typography>
+            <Link to="/" style={{ color: "white", textDecoration: "none" }}>
+              <Typography variant="subtitle1" ml={1}>
+                {t("myProfile")}
+              </Typography>
+            </Link>
           </Box>
           <Box
             sx={{
@@ -54,9 +57,14 @@ const NavBar = () => {
             }}
           >
             <ChallengeIcon />
-            <Typography variant="subtitle1" ml={1}>
-              {t("challenge")}
-            </Typography>
+            <Link
+              to="/information"
+              style={{ color: "white", textDecoration: "none" }}
+            >
+              <Typography variant="subtitle1" ml={1}>
+                {t("challenge")}
+              </Typography>
+            </Link>
           </Box>
           <Box
             sx={{
@@ -66,9 +74,14 @@ const NavBar = () => {
             }}
           >
             <InfoIcon />
-            <Typography variant="subtitle1" ml={1}>
-              {t("info")}
-            </Typography>
+            <Link
+              to="/recommend"
+              style={{ color: "white", textDecoration: "none" }}
+            >
+              <Typography variant="subtitle1" ml={1}>
+                {t("info")}
+              </Typography>
+            </Link>
           </Box>
         </Box>
         <Box marginLeft="16px">

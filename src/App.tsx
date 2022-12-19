@@ -23,7 +23,7 @@ function App() {
         <Grid>
           <Routes>
             <Route path="/" element={<Dashboard />} />
-            <Route path="/infomation" element={<Infomation />} />
+            <Route path="/information" element={<Infomation />} />
             <Route path="/recommend" element={<RecommendPage />} />
             {/* <Route path="/detail/:login" element={<CardInfor />} /> */}
           </Routes>

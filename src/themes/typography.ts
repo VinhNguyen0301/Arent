@@ -118,15 +118,14 @@ export const themeTypography = (theme: ThemeOption): TypographyOptions => {
         lineHeight: "22px",
       },
       body1: {
-        fontSize: "0.875rem",
-        fontWeight: 400,
-        lineHeight: "1.334em",
+        fontWeight: 300,
+        fontSize: "15px",
+        lineHeight: "22px",
       },
       body2: {
-        fontSize: "0.875rem",
-        letterSpacing: "0em",
-        fontWeight: 400,
-        lineHeight: "1.5em",
+        fontWeight: 300,
+        fontSize: "12px",
+        lineHeight: "22px",
       },
       button: {
         textTransform: "capitalize",

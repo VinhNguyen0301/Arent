@@ -6,6 +6,7 @@ import { ThemeProvider } from "@mui/material";
 import themes from "./themes/index";
 import Diary from "./components/Diary/Diary";
 import Infomation from "./views/Infomation";
+import RecommendPage from "./views/RecommendPage";
 
 function App() {
   return (
@@ -20,7 +21,8 @@ function App() {
         <Grid></Grid>
         <Grid>
           {/* <Dashboard /> */}
-          <Infomation />
+          {/* <Infomation /> */}
+          <RecommendPage />
         </Grid>
         <Grid></Grid>
       </Stack>

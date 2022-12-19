@@ -96,8 +96,11 @@ const Infomation = () => {
         </Box>
       </Grid>
       <Grid xs={12} marginTop="56px" width="960px" sx={{ marginLeft: "207px" }}>
-        <Diary />
-        <Diary />
+        <Box>
+          <div>My Diary</div>
+          <Diary />
+          <Diary />
+        </Box>
       </Grid>
 
       <Grid xs={12} marginBottom="114px">

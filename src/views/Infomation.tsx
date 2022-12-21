@@ -1,7 +1,7 @@
 import React from "react";
 import { Grid, Box, Stack, Typography, Button, styled } from "@mui/material";
 import Personal from "./Personal";
-import Graph from "../components/Diagram/Graph";
+import Graph2 from "../components/Diagram/Graph2";
 import Divider from "@mui/material/Divider";
 import Diary from "../components/Diary/Diary";
 
@@ -81,6 +81,14 @@ const MenuStyled = styled("div")(({ theme }) => ({
   },
 }));
 
+const TypoStyled = styled("div")(({ theme }) => ({
+  marginLeft: "207px",
+
+  [theme.breakpoints.down("sm")]: {
+    marginLeft: "0px",
+  },
+}));
+
 const Infomation = () => {
   return (
     <Grid container spacing={2}>
@@ -88,7 +96,7 @@ const Infomation = () => {
         <MenuStyled>{/* <Personal /> */}</MenuStyled>
       </Grid>
       <Grid xs={12} marginTop="56px">
-        <Graph />
+        <Graph2 />
       </Grid>
       {/* <Grid xs={12} marginTop="56px">
         <Box
@@ -227,9 +235,10 @@ const Infomation = () => {
         </Box>
       </Grid> */}
       <Grid xs={12} marginTop="56px">
-        <Typography variant="h1" ml="207px">
-          MY DIARY
-        </Typography>
+        <TypoStyled>
+          <Typography variant="h1">MY DIARY</Typography>
+        </TypoStyled>
+
         <MenuDiaryStyled>
           <Diary />
         </MenuDiaryStyled>

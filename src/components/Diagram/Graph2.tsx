@@ -1,4 +1,4 @@
-import { Grid } from "@mui/material";
+import { Grid, styled } from "@mui/material";
 import React from "react";
 import { Line } from "react-chartjs-2";
 import {
@@ -86,23 +86,40 @@ export const data = {
   ],
 };
 
+const GraphStyled = styled("div")(({ theme }) => ({
+  height: "312px",
+  width: "100%",
+  marginLeft: "207px",
+  backgroundColor: "#2E2E2E",
+  maxWidth: "960px",
+
+  [theme.breakpoints.down("sm")]: {
+    width: "390px",
+    height: "220px",
+    marginTop: "15px",
+    marginLeft: "0px",
+  },
+  [theme.breakpoints.between("md", "lg")]: {
+    width: "960px",
+  },
+  [theme.breakpoints.between("lg", "xl")]: {
+    width: "960px",
+  },
+}));
+
 const Graph2 = () => {
   return (
-    <Grid
-      height="312px"
-      width="100%"
-      maxWidth="960px"
-      sx={{ backgroundColor: "#2E2E2E", marginLeft: "207px" }}
-      container
-    >
-      <Line
-        options={options}
-        data={data}
-        style={{
-          backgroundColor: "#2E2E2E",
-          marginLeft: "61px",
-        }}
-      />
+    <Grid container>
+      <GraphStyled>
+        <Line
+          options={options}
+          data={data}
+          style={{
+            backgroundColor: "#2E2E2E",
+            marginLeft: "61px",
+          }}
+        />
+      </GraphStyled>
     </Grid>
   );
 };

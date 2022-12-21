@@ -45,7 +45,7 @@ const ButtonStyled = styled("button")(({ theme }) => ({
   color: "white",
   fontSize: "18px",
   fontWeight: "300px",
-  marginLeft: "40%",
+  marginLeft: "30%",
 
   [theme.breakpoints.between("md", "lg")]: {
     marginLeft: "40%",
@@ -62,7 +62,7 @@ const MenuStyled = styled("div")(({ theme }) => ({
   // large >960px
   flexDirection: "row",
   display: "flex",
-  marginLeft: "20%",
+  marginLeft: "10%",
   marginTop: "56px",
 
   [theme.breakpoints.between("md", "lg")]: {
@@ -71,13 +71,14 @@ const MenuStyled = styled("div")(({ theme }) => ({
   },
   [theme.breakpoints.between("lg", "xl")]: {
     width: "1000px",
-    marginLeft: "130px",
+    marginLeft: "159px",
   },
   [theme.breakpoints.down("sm")]: {
-    width: "390px",
-    marginLeft: "0px",
-    display: "grid",
-    gridTemplateColumns: "repeat(2, 1fr)",
+    // width: "390px",
+    // marginLeft: "0px",
+    // display: "grid",
+    // gridTemplateColumns: "repeat(2, 1fr)",
+    display: "none", // refactor here for mobile
   },
 }));
 
@@ -89,21 +90,43 @@ const TypoStyled = styled("div")(({ theme }) => ({
   },
 }));
 
+const TableInfoStyled = styled("div")(({ theme }) => ({
+  // large >960px
+  width: "960px",
+  height: "264px",
+  backgroundColor: "#414141",
+  marginLeft: "207px",
+
+  // [theme.breakpoints.between("md", "lg")]: {
+  //   width: "960px",
+  //   marginLeft: "145px",
+  // },
+  // [theme.breakpoints.between("lg", "xl")]: {
+  //   width: "1000px",
+  //   marginLeft: "130px",
+  // },
+  [theme.breakpoints.down("sm")]: {
+    // width: "390px",
+    // marginLeft: "0px",
+    // display: "grid",
+    // gridTemplateColumns: "repeat(2, 1fr)",
+    display: "none", // refactor here for mobile
+  },
+}));
+
 const Infomation = () => {
   return (
     <Grid container spacing={2}>
       <Grid xs={12}>
-        <MenuStyled>{/* <Personal /> */}</MenuStyled>
+        <MenuStyled>
+          <Personal />
+        </MenuStyled>
       </Grid>
       <Grid xs={12} marginTop="56px">
         <Graph2 />
       </Grid>
-      {/* <Grid xs={12} marginTop="56px">
-        <Box
-          width="960px"
-          height="264px"
-          sx={{ backgroundColor: "#414141", marginLeft: "207px" }}
-        >
+      <Grid xs={12} marginTop="56px">
+        <TableInfoStyled>
           <Grid ml="24px">
             <Typography color="white" pt="16px">
               MY EXERCISE
@@ -232,8 +255,8 @@ const Infomation = () => {
               </Stack>
             </Grid>
           </Grid>
-        </Box>
-      </Grid> */}
+        </TableInfoStyled>
+      </Grid>
       <Grid xs={12} marginTop="56px">
         <TypoStyled>
           <Typography variant="h1">MY DIARY</Typography>

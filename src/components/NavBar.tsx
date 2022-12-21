@@ -15,6 +15,39 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { Link } from "react-router-dom";
 import CodeIcon from "@mui/icons-material/Code";
 
+const LogoStyled = styled("div")(({ theme }) => ({
+  marginLeft: "160px",
+
+  [theme.breakpoints.down("sm")]: {
+    marginLeft: "10px",
+  },
+}));
+
+const MenuStyled = styled("div")(({ theme }) => ({
+  marginLeft: "315px",
+  display: "flex",
+  flexDirection: "row",
+
+  [theme.breakpoints.down("sm")]: {
+    marginLeft: "10px",
+  },
+}));
+
+const MenuSelectStyled = styled("div")(({ theme }) => ({
+  [theme.breakpoints.down("sm")]: {
+    display: "none",
+  },
+}));
+
+const MenuExpanseStyled = styled("div")(({ theme }) => ({
+  marginRight: "130px",
+  color: "#FF963C",
+  [theme.breakpoints.down("sm")]: {
+    marginLeft: "10px",
+    marginRight: "0px",
+  },
+}));
+
 const NavBar = () => {
   const [open, setOpen] = useState(false);
   const { t, i18n } = useTranslation();
@@ -28,74 +61,70 @@ const NavBar = () => {
   return (
     <AppBar position="sticky">
       <StyledToolBar>
-        {/* <Box
-          sx={{
-            display: {
-              xs: "none ",
-              sm: "block",
-            },
-          }}
-        >
+        <LogoStyled>
           <LogoIcon />
-        </Box>
+        </LogoStyled>
 
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "row",
-          }}
-        >
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "row",
-            }}
-          >
-            <ProfileIcon />
-            <Link to="/" style={{ color: "white", textDecoration: "none" }}>
-              <Typography variant="subtitle1" ml={1}>
-                {t("myProfile")}
-              </Typography>
-            </Link>
-          </Box>
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "row",
-              marginLeft: "16px",
-            }}
-          >
-            <ChallengeIcon />
-            <Link
-              to="/information"
-              style={{ color: "white", textDecoration: "none" }}
+        <MenuStyled>
+          <Link to="/" style={{ color: "white", textDecoration: "none" }}>
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "row",
+              }}
             >
-              <Typography variant="subtitle1" ml={1}>
-                {t("challenge")}
-              </Typography>
-            </Link>
-          </Box>
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "row",
-              marginLeft: "16px",
-            }}
+              <ProfileIcon />
+              <MenuSelectStyled>
+                <Typography variant="subtitle1" ml={1} pr={2}>
+                  {t("myProfile")}
+                </Typography>
+              </MenuSelectStyled>
+            </Box>
+          </Link>
+
+          <Link
+            to="/information"
+            style={{ color: "white", textDecoration: "none" }}
           >
-            <InfoIcon />
-            <Link
-              to="/recommend"
-              style={{ color: "white", textDecoration: "none" }}
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "row",
+                marginLeft: "16px",
+              }}
             >
-              <Typography variant="subtitle1" ml={1}>
-                {t("info")}
-              </Typography>
-            </Link>
-          </Box>
-        </Box>
-        <Box marginLeft="16px">
+              <ChallengeIcon />
+              <MenuSelectStyled>
+                <Typography variant="subtitle1" ml={1} pr={2}>
+                  {t("challenge")}
+                </Typography>
+              </MenuSelectStyled>
+            </Box>
+          </Link>
+
+          <Link
+            to="/recommend"
+            style={{ color: "white", textDecoration: "none" }}
+          >
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "row",
+                marginLeft: "16px",
+              }}
+            >
+              <InfoIcon />
+              <MenuSelectStyled>
+                <Typography variant="subtitle1" ml={1} pr={2}>
+                  {t("info")}
+                </Typography>
+              </MenuSelectStyled>
+            </Box>
+          </Link>
+        </MenuStyled>
+        <MenuExpanseStyled>
           <MenuIcon />
-        </Box> */}
+        </MenuExpanseStyled>
       </StyledToolBar>
     </AppBar>
   );

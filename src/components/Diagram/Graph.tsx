@@ -97,6 +97,14 @@ const GraphStyled = styled("div")(({ theme }) => ({
     height: "220px",
     marginTop: "15px",
   },
+  [theme.breakpoints.between("md", "lg")]: {
+    marginLeft: "80px",
+    width: "572px",
+  },
+  [theme.breakpoints.between("lg", "xl")]: {
+    marginLeft: "80px",
+    width: "572px",
+  },
 }));
 
 const LineStyled = styled("div")(({ theme }) => ({
@@ -106,6 +114,9 @@ const LineStyled = styled("div")(({ theme }) => ({
   [theme.breakpoints.down("sm")]: {
     marginLeft: "20px",
     height: "220px",
+  },
+  [theme.breakpoints.between("md", "lg")]: {
+    width: "572px",
   },
 }));
 

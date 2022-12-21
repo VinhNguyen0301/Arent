@@ -1,7 +1,7 @@
 import React from "react";
 import { Grid, Box, Stack, Typography, Button, styled } from "@mui/material";
 import Personal from "./Personal";
-import Graph2 from "../components/Diagram/Graph2";
+import Graph from "../components/Diagram/Graph";
 import Divider from "@mui/material/Divider";
 import Diary from "../components/Diary/Diary";
 
@@ -16,12 +16,62 @@ const MenuDiaryStyled = styled("div")(({ theme }) => ({
   display: "grid",
   gridTemplateColumns: "repeat(4, 1fr)",
   width: "960px",
+  marginLeft: "207px",
 
   [theme.breakpoints.between("md", "lg")]: {
     width: "960px",
+    marginLeft: "207px",
   },
   [theme.breakpoints.between("lg", "xl")]: {
     width: "1000px",
+    marginLeft: "207px",
+  },
+  [theme.breakpoints.down("sm")]: {
+    width: "390px",
+    marginLeft: "0px",
+    display: "grid",
+    gridTemplateColumns: "repeat(2, 1fr)",
+  },
+}));
+
+const ButtonStyled = styled("button")(({ theme }) => ({
+  // large >960px
+  background: "linear-gradient(32.95deg, #FFCC21 8.75%, #FF963C 86.64%)",
+  width: "296px",
+  height: "56px",
+  marginTop: "28px",
+  borderRadius: "7px",
+  borderColor: "#FFCC21",
+  color: "white",
+  fontSize: "18px",
+  fontWeight: "300px",
+  marginLeft: "40%",
+
+  [theme.breakpoints.between("md", "lg")]: {
+    marginLeft: "40%",
+  },
+  [theme.breakpoints.between("lg", "xl")]: {
+    marginLeft: "40%",
+  },
+  [theme.breakpoints.down("sm")]: {
+    marginLeft: "50px",
+  },
+}));
+
+const MenuStyled = styled("div")(({ theme }) => ({
+  // large >960px
+  flexDirection: "row",
+  display: "flex",
+  marginLeft: "20%",
+  marginTop: "56px",
+
+  [theme.breakpoints.between("md", "lg")]: {
+    width: "960px",
+    marginLeft: "145px",
+  },
+  [theme.breakpoints.between("lg", "xl")]: {
+    width: "1000px",
+    marginLeft: "130px",
   },
   [theme.breakpoints.down("sm")]: {
     width: "390px",
@@ -35,17 +85,12 @@ const Infomation = () => {
   return (
     <Grid container spacing={2}>
       <Grid xs={12}>
-        <Box
-          sx={{ flexDirection: "row", display: "flex", marginLeft: "160px" }}
-          mt="56px"
-        >
-          <Personal />
-        </Box>
+        <MenuStyled>{/* <Personal /> */}</MenuStyled>
       </Grid>
       <Grid xs={12} marginTop="56px">
-        <Graph2 />
+        <Graph />
       </Grid>
-      <Grid xs={12} marginTop="56px">
+      {/* <Grid xs={12} marginTop="56px">
         <Box
           width="960px"
           height="264px"
@@ -180,27 +225,18 @@ const Infomation = () => {
             </Grid>
           </Grid>
         </Box>
-      </Grid>
-      <Grid xs={12} marginTop="56px" width="960px" sx={{ marginLeft: "207px" }}>
-        <Typography variant="h1">MY DIARY</Typography>
+      </Grid> */}
+      <Grid xs={12} marginTop="56px">
+        <Typography variant="h1" ml="207px">
+          MY DIARY
+        </Typography>
         <MenuDiaryStyled>
           <Diary />
         </MenuDiaryStyled>
       </Grid>
 
       <Grid xs={12} marginBottom="114px">
-        <Button
-          style={{
-            background:
-              "linear-gradient(32.95deg, #FFCC21 8.75%, #FF963C 86.64%)",
-            width: "296px",
-            height: "56px",
-            marginTop: "28px",
-            marginLeft: "27%",
-          }}
-        >
-          自分の日記をもっと見る
-        </Button>
+        <ButtonStyled>自分の日記をもっと見る</ButtonStyled>
       </Grid>
     </Grid>
   );

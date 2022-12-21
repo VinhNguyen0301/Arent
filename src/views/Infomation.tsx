@@ -15,6 +15,7 @@ const MenuDiaryStyled = styled("div")(({ theme }) => ({
   flexDirection: "row",
   display: "grid",
   gridTemplateColumns: "repeat(4, 1fr)",
+  width: "960px",
 
   [theme.breakpoints.between("md", "lg")]: {
     width: "960px",

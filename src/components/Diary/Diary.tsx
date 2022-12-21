@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Typography, Grid } from "@mui/material";
+import { Box, Typography, Grid, styled } from "@mui/material";
 
 const fakeData = [
   {
@@ -60,16 +60,35 @@ const fakeData = [
   },
 ];
 
+const MenuStyled = styled("div")(({ theme }) => ({
+  // large >960px
+  width: "231px",
+  height: "231px",
+  marginBottom: "12px",
+  backgroundColor: "white",
+  borderStyle: "double",
+
+  // [theme.breakpoints.between("md", "lg")]: {
+  //   width: "960px",
+  //   marginLeft: "145px",
+  // },
+  // [theme.breakpoints.between("lg", "xl")]: {
+  //   width: "1000px",
+  //   marginLeft: "130px",
+  // },
+  [theme.breakpoints.down("sm")]: {
+    width: "190px",
+    marginLeft: "0px",
+    marginBottom: "5px",
+  },
+}));
+
 const Diary = () => {
   return (
     <>
       {fakeData.map((data) => {
         return (
-          <Box
-            width="231px"
-            height="231px"
-            sx={{ backgroundColor: "white", borderStyle: "double" }}
-          >
+          <MenuStyled>
             <Grid ml="16px" mt="16px">
               <Typography variant="caption">{data.date}</Typography>
             </Grid>
@@ -80,7 +99,7 @@ const Diary = () => {
               <Typography variant="subtitle2">{data.header}</Typography>
               <Typography variant="subtitle2">{data.title}</Typography>
             </Box>
-          </Box>
+          </MenuStyled>
         );
       })}
     </>

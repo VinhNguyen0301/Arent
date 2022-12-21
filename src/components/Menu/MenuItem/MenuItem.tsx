@@ -6,7 +6,7 @@ import { Box, Button, Typography } from "@mui/material";
 export default function MenuItem() {
   return (
     <Box ml="160px">
-      <ImageList sx={{ width: 960, height: 467 }} cols={4} rowHeight={234}>
+      <ImageList sx={{ height: 467 }} cols={4} rowHeight={234}>
         {itemData.map((item) => (
           <ImageListItem
             key={item.img}

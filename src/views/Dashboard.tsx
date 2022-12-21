@@ -1,30 +1,40 @@
 import React from "react";
 import Graph from "../components/Diagram/Graph";
-import { Grid, Box, Stack } from "@mui/material";
+import { Grid, Box, Stack, styled } from "@mui/material";
 import HexagonItem from "../components/Menu/MenuHexagon/HexagonItem";
-import D1 from "./D1";
+import CircleGraph from "./CircleGraph";
 import MenuItem from "../components/Menu/MenuItem/MenuItem";
+
+const MenuBoxStyled = styled("div")(({ theme }) => ({
+  display: "flex",
+  justifyContent: "space-evenly",
+
+  [theme.breakpoints.down("sm")]: {
+    display: "grid",
+    gap: 1,
+    gridTemplateColumns: "repeat(2, 1fr)",
+    marginLeft: "50%",
+  },
+}));
 
 const Dashboard = () => {
   return (
-    <Grid container spacing={2} maxWidth="1280px">
-      <Grid maxHeight="312px" xs={5} sx={{ backgroundColor: "#2E2E2E" }}>
-        <D1 />
+    <Grid container spacing={2}>
+      <Grid xs={5} sx={{ backgroundColor: "#2E2E2E" }}>
+        <CircleGraph />
       </Grid>
-      <Grid xs={7}>
+      <Grid xs={7} sx={{ backgroundColor: "#2E2E2E" }}>
         <Graph />
       </Grid>
+
       <Grid xs={12}>
-        <Box sx={{ display: "flex", justifyContent: "space-evenly" }}>
+        <MenuBoxStyled>
           <HexagonItem />
-          <HexagonItem />
-          <HexagonItem />
-          <HexagonItem />
-        </Box>
+        </MenuBoxStyled>
       </Grid>
-      <Grid xs={12} mt="30px" marginBottom="114px">
+      {/* <Grid xs={12} mt="30px" marginBottom="114px">
         <MenuItem />
-      </Grid>
+      </Grid> */}
     </Grid>
   );
 };

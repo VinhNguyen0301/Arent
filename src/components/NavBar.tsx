@@ -13,6 +13,7 @@ import { ChallengeIcon, InfoIcon, LogoIcon, ProfileIcon } from "./icon";
 import { useTranslation } from "react-i18next";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Link } from "react-router-dom";
+import CodeIcon from "@mui/icons-material/Code";
 
 const NavBar = () => {
   const [open, setOpen] = useState(false);
@@ -27,9 +28,17 @@ const NavBar = () => {
   return (
     <AppBar position="sticky">
       <StyledToolBar>
-        <Box>
+        {/* <Box
+          sx={{
+            display: {
+              xs: "none ",
+              sm: "block",
+            },
+          }}
+        >
           <LogoIcon />
         </Box>
+
         <Box
           sx={{
             display: "flex",
@@ -86,7 +95,7 @@ const NavBar = () => {
         </Box>
         <Box marginLeft="16px">
           <MenuIcon />
-        </Box>
+        </Box> */}
       </StyledToolBar>
     </AppBar>
   );

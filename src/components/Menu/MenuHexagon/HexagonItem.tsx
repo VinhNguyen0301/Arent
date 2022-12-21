@@ -35,26 +35,59 @@ const HexagonStyled = styled(Box)(() => ({
   },
 }));
 
+const fakeData = [
+  {
+    // img: <KnifeIcon/>,
+    title: "Morning",
+  },
+  {
+    // img: <KnifeIcon/>,
+    title: "Lunch",
+  },
+  {
+    // img: <KnifeIcon/>,
+    title: "Dinner",
+  },
+  {
+    // img: <CupIcon/>,
+    title: "Snack",
+  },
+];
+
+const HexagonBoxStyled = styled("div")(({ theme }) => ({
+  marginTop: "22px",
+
+  [theme.breakpoints.down("sm")]: {
+    marginLeft: "20px",
+    marginBottom: "20px",
+  },
+}));
+
 const HexagonItem = () => {
   return (
-    <Box mt="22px">
-      <HexagonStyled>
-        <Box ml="25px">
-          <KnifeIcon />
-          {/* <CupIcon /> */}
-        </Box>
-      </HexagonStyled>
-      <Typography
-        sx={{
-          position: "absolute",
-          marginLeft: "25px",
-          marginTop: "-10px",
-          color: "white",
-        }}
-      >
-        Morning
-      </Typography>
-    </Box>
+    <>
+      {fakeData.map((data) => {
+        return (
+          <HexagonBoxStyled>
+            <HexagonStyled>
+              <Box ml="29px">
+                {data.title === "Snack" ? <CupIcon /> : <KnifeIcon />}
+              </Box>
+            </HexagonStyled>
+            <Typography
+              sx={{
+                position: "absolute",
+                marginLeft: "25px",
+                marginTop: "-10px",
+                color: "white",
+              }}
+            >
+              {data.title}
+            </Typography>
+          </HexagonBoxStyled>
+        );
+      })}
+    </>
   );
 };
 

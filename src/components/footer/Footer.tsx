@@ -26,7 +26,7 @@ const Footer = () => {
   return (
     <AppBar position="sticky">
       <StyledToolBar>
-        <Box
+        {/* <Box
           sx={{
             display: "flex",
             flexDirection: "row",
@@ -73,7 +73,7 @@ const Footer = () => {
           <Typography variant="subtitle1" ml={5}>
             {t("myProfile")}
           </Typography>
-        </Box>
+        </Box> */}
       </StyledToolBar>
     </AppBar>
   );

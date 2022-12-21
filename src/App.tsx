@@ -11,35 +11,37 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 function App() {
   return (
     <ThemeProvider theme={themes()}>
-      <NavBar />
+      <Box color={"text.primary"}>
+        <NavBar />
 
-      <Stack
-        direction="row"
-        spacing={2}
-        justifyContent="space-between"
-        height="100%"
-      >
-        <Grid></Grid>
-        <Grid>
-          <Routes>
-            <Route path="/" element={<Dashboard />} />
-            <Route path="/information" element={<Infomation />} />
-            <Route path="/recommend" element={<RecommendPage />} />
-            {/* <Route path="/detail/:login" element={<CardInfor />} /> */}
-          </Routes>
-        </Grid>
-        <Grid></Grid>
-      </Stack>
-      <div
-        style={{
-          minWidth: "100%",
-          position: "fixed",
-          bottom: "0",
-          zIndex: "1",
-        }}
-      >
-        <Footer />
-      </div>
+        <Stack
+          direction="row"
+          spacing={2}
+          justifyContent="space-between"
+          height="100%"
+        >
+          <Grid></Grid>
+          <Grid xs={12} width="100%">
+            <Routes>
+              <Route path="/" element={<Dashboard />} />
+              <Route path="/information" element={<Infomation />} />
+              <Route path="/recommend" element={<RecommendPage />} />
+              {/* <Route path="/detail/:login" element={<CardInfor />} /> */}
+            </Routes>
+          </Grid>
+          <Grid></Grid>
+        </Stack>
+        <div
+          style={{
+            minWidth: "100%",
+            position: "fixed",
+            bottom: "0",
+            zIndex: "1",
+          }}
+        >
+          <Footer />
+        </div>
+      </Box>
     </ThemeProvider>
   );
 }

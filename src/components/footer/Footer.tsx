@@ -7,11 +7,20 @@ import {
   MenuItem,
 } from "@mui/material";
 import Toolbar from "@mui/material/Toolbar";
-import { ChallengeIcon, InfoIcon, LogoIcon, ProfileIcon } from "../icon";
-import MenuIcon from "@mui/icons-material/Menu";
 import { useTranslation } from "react-i18next";
 
 import React, { useState } from "react";
+
+const MenuSelectStyled = styled("div")(({ theme }) => ({
+  display: "flex",
+  flexDirection: "row",
+  marginLeft: "160px",
+
+  [theme.breakpoints.down("sm")]: {
+    marginLeft: "10px",
+    display: "none",
+  },
+}));
 
 const Footer = () => {
   const [open, setOpen] = useState(false);
@@ -26,54 +35,33 @@ const Footer = () => {
   return (
     <AppBar position="sticky">
       <StyledToolBar>
-        {/* <Box
+        <MenuSelectStyled
           sx={{
             display: "flex",
             flexDirection: "row",
           }}
         >
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "row",
-            }}
-          >
-            <Typography variant="subtitle1" ml={1}>
-              {t("myProfile")}
-            </Typography>
-          </Box>
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "row",
-              marginLeft: "16px",
-            }}
-          >
-            <Typography variant="subtitle1" ml={1}>
-              {t("challenge")}
-            </Typography>
-          </Box>
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "row",
-              marginLeft: "16px",
-            }}
-          >
-            <Typography variant="subtitle1" ml={1}>
-              {t("info")}
-            </Typography>
-          </Box>
-          <Typography variant="subtitle1" ml={5}>
-            {t("myProfile")}
+          <Typography variant="subtitle1" mt={1.5}>
+            会員登録
           </Typography>
-          <Typography variant="subtitle1" ml={5}>
-            {t("myProfile")}
+
+          <Typography variant="subtitle1" ml={5.6} mt={1.5}>
+            運営会社
           </Typography>
-          <Typography variant="subtitle1" ml={5}>
-            {t("myProfile")}
+
+          <Typography variant="subtitle1" ml={5.6} mt={1.5}>
+            利用規約
           </Typography>
-        </Box> */}
+          <Typography variant="subtitle1" ml={5.6} mt={1.5}>
+            個人情報の取扱について
+          </Typography>
+          <Typography variant="subtitle1" ml={5.6} mt={1.5}>
+            特定商取引法に基づく表記
+          </Typography>
+          <Typography variant="subtitle1" ml={5.6} mt={1.5}>
+            お問い合わせ
+          </Typography>
+        </MenuSelectStyled>
       </StyledToolBar>
     </AppBar>
   );

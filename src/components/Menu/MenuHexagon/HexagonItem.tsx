@@ -37,19 +37,19 @@ const HexagonStyled = styled(Box)(() => ({
 
 const fakeData = [
   {
-    // img: <KnifeIcon/>,
+    // img: KnifeIcon,
     title: "Morning",
   },
   {
-    // img: <KnifeIcon/>,
+    // img: KnifeIcon,
     title: "Lunch",
   },
   {
-    // img: <KnifeIcon/>,
+    // img: KnifeIcon,
     title: "Dinner",
   },
   {
-    // img: <CupIcon/>,
+    // img: CupIcon,
     title: "Snack",
   },
 ];

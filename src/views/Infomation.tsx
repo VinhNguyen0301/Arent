@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Box, Stack, Typography, Button } from "@mui/material";
+import { Grid, Box, Stack, Typography, Button, styled } from "@mui/material";
 import Personal from "./Personal";
 import Graph2 from "../components/Diagram/Graph2";
 import Divider from "@mui/material/Divider";
@@ -11,6 +11,25 @@ const style = {
   bgcolor: "background.paper",
 };
 
+const MenuDiaryStyled = styled("div")(({ theme }) => ({
+  flexDirection: "row",
+  display: "grid",
+  gridTemplateColumns: "repeat(4, 1fr)",
+
+  [theme.breakpoints.between("md", "lg")]: {
+    width: "960px",
+  },
+  [theme.breakpoints.between("lg", "xl")]: {
+    width: "1000px",
+  },
+  [theme.breakpoints.down("sm")]: {
+    width: "390px",
+    marginLeft: "0px",
+    display: "grid",
+    gridTemplateColumns: "repeat(2, 1fr)",
+  },
+}));
+
 const Infomation = () => {
   return (
     <Grid container spacing={2}>
@@ -19,8 +38,6 @@ const Infomation = () => {
           sx={{ flexDirection: "row", display: "flex", marginLeft: "160px" }}
           mt="56px"
         >
-          <Personal />
-          <Personal />
           <Personal />
         </Box>
       </Grid>
@@ -164,11 +181,10 @@ const Infomation = () => {
         </Box>
       </Grid>
       <Grid xs={12} marginTop="56px" width="960px" sx={{ marginLeft: "207px" }}>
-        <Box>
-          <Typography variant="h1">MY DIARY</Typography>
+        <Typography variant="h1">MY DIARY</Typography>
+        <MenuDiaryStyled>
           <Diary />
-          <Diary />
-        </Box>
+        </MenuDiaryStyled>
       </Grid>
 
       <Grid xs={12} marginBottom="114px">

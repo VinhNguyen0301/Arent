@@ -32,9 +32,9 @@ const Dashboard = () => {
           <HexagonItem />
         </MenuBoxStyled>
       </Grid>
-      {/* <Grid xs={12} mt="30px" marginBottom="114px">
+      <Grid xs={12} mt="30px" marginBottom="114px">
         <MenuItem />
-      </Grid> */}
+      </Grid>
     </Grid>
   );
 };

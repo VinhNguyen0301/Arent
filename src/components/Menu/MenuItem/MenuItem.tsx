@@ -1,104 +1,148 @@
-import * as React from "react";
+import React, { useState } from "react";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Button, Typography, styled } from "@mui/material";
+import m01 from "../../../assets/Photo/photo/m01.jpg";
+import m02 from "../../../assets/Photo/photo/m02.jpg";
+import m03 from "../../../assets/Photo/photo/m03.jpg";
+import s01 from "../../../assets/Photo/photo/s01.jpg";
+import d02 from "../../../assets/Photo/photo/d02.jpg";
+import l01 from "../../../assets/Photo/photo/l01.jpg";
+import l02 from "../../../assets/Photo/photo/l02.jpg";
+
+const MenuStyled = styled("div")(({ theme }) => ({
+  // large >960px
+  width: "1280px",
+  marginLeft: "200px",
+
+  [theme.breakpoints.between("md", "lg")]: {
+    width: "960px",
+    marginLeft: "145px",
+  },
+  [theme.breakpoints.between("lg", "xl")]: {
+    width: "1000px",
+    marginLeft: "130px",
+  },
+  [theme.breakpoints.down("sm")]: {
+    width: "390px",
+    marginLeft: "0px",
+  },
+}));
+
+const ButtonStyled = styled("button")(({ theme }) => ({
+  // large >960px
+  background: "linear-gradient(32.95deg, #FFCC21 8.75%, #FF963C 86.64%)",
+  width: "296px",
+  height: "56px",
+  marginTop: "28px",
+  borderRadius: "7px",
+  borderColor: "#FFCC21",
+  color: "white",
+  fontSize: "18px",
+  fontWeight: "300px",
+  marginLeft: "40%",
+
+  [theme.breakpoints.between("md", "lg")]: {
+    marginLeft: "40%",
+  },
+  [theme.breakpoints.between("lg", "xl")]: {
+    marginLeft: "40%",
+  },
+  [theme.breakpoints.down("sm")]: {
+    marginLeft: "50px",
+  },
+}));
 
 export default function MenuItem() {
   return (
-    <Box ml="160px">
-      <ImageList sx={{ height: 467 }} cols={4} rowHeight={234}>
-        {itemData.map((item) => (
-          <ImageListItem
-            key={item.img}
-            style={{
-              position: "relative",
-              marginBottom: "8px",
-              marginLeft: "8px",
-            }}
-          >
-            <Typography
+    <Box>
+      <MenuStyled>
+        <ImageList sx={{ height: 467 }} cols={4} rowHeight={234}>
+          {itemData.map((item) => (
+            <ImageListItem
+              key={item.img}
               style={{
-                position: "absolute",
-                bottom: "0px",
-                left: "0px",
-                backgroundColor: "yellow",
+                position: "relative",
+                marginBottom: "8px",
+                marginLeft: "8px",
               }}
             >
-              05.21.Morning
-            </Typography>
+              <Typography
+                style={{
+                  position: "absolute",
+                  bottom: "0px",
+                  left: "0px",
+                  backgroundColor: "yellow",
+                }}
+              >
+                {item.title}
+              </Typography>
 
-            <img
-              src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
-              srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
-              alt={item.title}
-              loading="lazy"
-            />
-          </ImageListItem>
-        ))}
-      </ImageList>
-      <Button
-        style={{
-          background:
-            "linear-gradient(32.95deg, #FFCC21 8.75%, #FF963C 86.64%)",
-          width: "296px",
-          height: "56px",
-          marginTop: "28px",
-          marginLeft: "27%",
-        }}
-      >
-        記録をもっと見る
-      </Button>
+              <img
+                src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
+                srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
+                alt={item.title}
+                loading="lazy"
+                width="234px !important"
+                height="234px !important"
+              />
+            </ImageListItem>
+          ))}
+        </ImageList>
+      </MenuStyled>
+
+      <ButtonStyled>記録をもっと見る</ButtonStyled>
     </Box>
   );
 }
 
 const itemData = [
   {
-    img: "https://images.unsplash.com/photo-1551963831-b3b1ca40c98e",
-    title: "Breakfast",
+    img: m01,
+    title: "05.21.Morning",
   },
   {
-    img: "https://images.unsplash.com/photo-1551782450-a2132b4ba21d",
-    title: "Burger",
+    img: m02,
+    title: "05.21.Lunch",
   },
   {
-    img: "https://images.unsplash.com/photo-1522770179533-24471fcdba45",
-    title: "Camera",
+    img: m03,
+    title: "05.21.Dinner",
   },
   {
-    img: "https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c",
-    title: "Coffee",
+    img: s01,
+    title: "05.21.Snack",
   },
   {
-    img: "https://images.unsplash.com/photo-1533827432537-70133748f5c8",
-    title: "Hats",
+    img: d02,
+    title: "05.20.Morning",
   },
   {
-    img: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62",
-    title: "Honey",
+    img: l01,
+    title: "05.20.Lunch",
   },
   {
-    img: "https://images.unsplash.com/photo-1516802273409-68526ee1bdd6",
-    title: "Basketball",
+    img: l02,
+    title: "05.20.Dinner",
   },
   {
-    img: "https://images.unsplash.com/photo-1518756131217-31eb79b20e8f",
-    title: "Fern",
+    img: m01,
+    title: "05.21.Snack",
   },
   {
-    img: "https://images.unsplash.com/photo-1597645587822-e99fa5d45d25",
+    img: m02,
     title: "Mushrooms",
   },
   {
-    img: "https://images.unsplash.com/photo-1567306301408-9b74779a11af",
+    img: l01,
     title: "Tomato basil",
   },
   {
-    img: "https://images.unsplash.com/photo-1471357674240-e1a485acb3e1",
+    img: l02,
     title: "Sea star",
   },
   {
-    img: "https://images.unsplash.com/photo-1589118949245-7d38baf380d6",
+    img: d02,
     title: "Bike",
   },
 ];

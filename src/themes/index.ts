@@ -50,7 +50,6 @@ export const theme = () => {
       },
     },
   };
-  console.log("breakpoint", themeOptions);
   const themes = createTheme(themeOptions);
   themes.components = componentStyleOverrides(themeOption);
 
